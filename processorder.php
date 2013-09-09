@@ -1,7 +1,11 @@
 <?php 
+$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 $tireqty = $_POST['tireqty'];
 $oilqty = $_POST['oilqty'];
 $sparkqty = $_POST['sparkqty'];
+$address = $_POST['address'];
+
+$fp = fopen("$DOCUMENT_ROOT/../orders/orders.txt",'ab');
 
 define('TIREPRICE',100);
 define('OILPRICE', 10);
